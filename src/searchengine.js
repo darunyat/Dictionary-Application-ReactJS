@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./searchengine.css";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
+import Button from "react-bootstrap/Button";
 
+import WordDefinition from "./worddefinition";
 export default function SearchEngine() {
   let [value, setValue] = useState(``);
+  let [searchedWord, setSearchedWord] = useState(``);
 
   function handleResponse(response) {
-    console.log(response);
+    console.log(response.data[0]);
+    setSearchedWord(response.data[0]);
   }
 
   function search(event) {
@@ -20,24 +25,25 @@ export default function SearchEngine() {
   }
   return (
     <div className="row">
-      <div className="col-md-3 center">
-        <form onSubmit={search}>
-          <div class="form-group">
+      <form onSubmit={search}>
+        <div className="row">
+          <div className="col-10">
             <input
+              align="center"
               type="search"
-              class="form-control"
-              id="inputPassword2"
-              placeholder="Password"
-              autofocus={true}
+              className="form-control"
+              placeholder="Type in a word..."
+              autoFocus={true}
               onChange={updateValue}
             />
-
-            <button type="submit" class="btn btn-primary mb-2">
-              Search
-            </button>
           </div>
-        </form>
-      </div>
+          <div className="col-2 align-items-center">
+            <Button variant="outline-info">Search</Button>{" "}
+          </div>
+        </div>
+      </form>
+
+      <WordDefinition data={searchedWord} />
     </div>
   );
 }
