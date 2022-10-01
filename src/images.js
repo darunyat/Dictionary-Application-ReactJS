@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./images.css";
 
 export default function Images(props) {
-  console.log(props);
   if (props.images) {
     return (
       <section className="meaning p-3 ">
