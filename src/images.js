@@ -11,7 +11,7 @@ export default function Images(props) {
             return (
               <div className=" col-3 mt-3" key={index}>
                 <a href={images.src.original} target="_blank" rel="noreferrer">
-                  <img src={images.src.portrait} className="img-fluid" />
+                  <img src={images.src.portrait} className="img-fluid" alt="" />
                 </a>
               </div>
             );
