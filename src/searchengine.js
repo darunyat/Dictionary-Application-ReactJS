@@ -4,7 +4,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import Button from "react-bootstrap/Button";
 import Images from "./images";
-
+import "./App.css";
 import WordDefinition from "./worddefinition";
 export default function SearchEngine() {
   let [value, setValue] = useState(``);
@@ -53,6 +53,14 @@ export default function SearchEngine() {
       </form>
       <WordDefinition data={searchedWord} />
       <Images images={images} />
+      <div className="github text-center">
+        This code is
+        <a href="https://github.com/darunyat/react-dictionary" target="_blank">
+          {" "}
+          opensourced{" "}
+        </a>
+        🐈
+      </div>
     </div>
   );
 }

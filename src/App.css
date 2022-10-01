@@ -32,3 +32,14 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.github,
+.github a {
+  color: rgb(130, 124, 118);
+
+  padding-top: 100px;
+}
+
+.github a:hover {
+  color: rgba(0, 0, 0, 0.723);
+}

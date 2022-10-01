@@ -10,7 +10,7 @@ export default function WordDefinition(props) {
           <h1 className="text-uppercase text-center mt-3">{props.data.word}</h1>{" "}
           {props.data.phonetics.map(function (phonetics, index) {
             return (
-              <div className="Phonetics" key={index}>
+              <div className="Phonetics" key={index} >
                 <Phonetics phonetic={phonetics} />
               </div>
             );
