@@ -1,13 +1,12 @@
 import React from "react";
 import Synonyms from "./synonyms";
 export default function Meaning(props) {
-  console.log(props.data);
   return (
     <div className="Meaning">
       <h2 className=" ms-5 list-unstyled text-capitalize">
         {props.data.partOfSpeech}
       </h2>
-   
+
       {props.data.definitions.map(function (definition, index) {
         return (
           <div key={index}>

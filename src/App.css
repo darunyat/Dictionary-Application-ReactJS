@@ -1,4 +1,7 @@
 
+body {
+  background: rgb(249, 127, 255);
+}
 
 .App-logo {
   height: 20vmin;
@@ -21,8 +24,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
 
 @keyframes App-logo-spin {
   from {

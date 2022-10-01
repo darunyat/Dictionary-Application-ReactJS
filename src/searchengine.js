@@ -10,7 +10,6 @@ export default function SearchEngine() {
   let [searchedWord, setSearchedWord] = useState(``);
 
   function handleResponse(response) {
-    console.log(response.data[0]);
     setSearchedWord(response.data[0]);
   }
 
