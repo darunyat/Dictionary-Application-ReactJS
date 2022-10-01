@@ -1,7 +1,7 @@
 import React from "react";
 import Meaning from "./wordMeaning";
 import Phonetics from "./phonetics";
-
+import "./worddefinition.css";
 export default function WordDefinition(props) {
   if (props.data) {
     return (
@@ -10,7 +10,7 @@ export default function WordDefinition(props) {
           <h1 className="text-uppercase text-center mt-3">{props.data.word}</h1>{" "}
           {props.data.phonetics.map(function (phonetics, index) {
             return (
-              <div className="Phonetics">
+              <div className="Phonetics" key={index}>
                 <Phonetics phonetic={phonetics} />
               </div>
             );

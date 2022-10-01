@@ -3,17 +3,19 @@ import "./searchengine.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import Button from "react-bootstrap/Button";
+import Images from "./images";
 
 import WordDefinition from "./worddefinition";
 export default function SearchEngine() {
   let [value, setValue] = useState(``);
   let [searchedWord, setSearchedWord] = useState(``);
+  let [images, setImages] = useState(``);
 
   function handleResponse(response) {
     setSearchedWord(response.data[0]);
   }
   function handlePexelsResponses(response) {
-    console.log(response.data);
+    setImages(response.data.photos);
   }
   function search(event) {
     event.preventDefault();
@@ -22,7 +24,7 @@ export default function SearchEngine() {
     axios.get(apiUrl).then(handleResponse);
 
     const pexelsAPIKey = `563492ad6f91700001000001a292fde0eca34991abda79a0eb486d98`;
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${value}&per_page=1`;
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${value}&per_page=12`;
     axios
       .get(pexelsApiUrl, { headers: { Authorization: `${pexelsAPIKey}` } })
       .then(handlePexelsResponses);
@@ -49,8 +51,8 @@ export default function SearchEngine() {
           </div>
         </div>
       </form>
-
       <WordDefinition data={searchedWord} />
+      <Images images={images} />
     </div>
   );
 }

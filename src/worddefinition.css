@@ -1,9 +1,10 @@
-a {
-  color: rgb(209, 218, 192);
+.audio a {
+  color: rgb(130, 124, 118);
 }
 
 .meaning {
-  background-color: rgb(209, 218, 192);
+  background-color: rgba(243, 235, 225, 0.535);
   border-radius: 4px;
-  margin: 5px;
+  margin: 0 auto 5px;
+  max-width: 960px;
 }
