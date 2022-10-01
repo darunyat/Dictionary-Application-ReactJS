@@ -55,7 +55,11 @@ export default function SearchEngine() {
       <Images images={images} />
       <div className="github text-center">
         This code is
-        <a href="https://github.com/darunyat/react-dictionary" target="_blank">
+        <a
+          href="https://github.com/darunyat/react-dictionary"
+          target="_blank"
+          rel="noreferrer"
+        >
           {" "}
           opensourced{" "}
         </a>
