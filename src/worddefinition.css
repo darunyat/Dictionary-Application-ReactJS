@@ -1,7 +1,9 @@
 a {
-  color: yellowgreen;
+  color: rgb(209, 218, 192);
 }
 
 .meaning {
-  background-color: yellowgreen;
+  background-color: rgb(209, 218, 192);
+  border-radius: 4px;
+  margin: 5px;
 }

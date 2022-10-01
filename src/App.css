@@ -1,6 +1,6 @@
-
 body {
-  background: rgb(249, 127, 255);
+  max-width: 960px;
+  padding: 60px 0 100px;
 }
 
 .App-logo {
