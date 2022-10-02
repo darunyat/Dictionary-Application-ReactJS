@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./searchengine.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
-import Button from "react-bootstrap/Button";
 import Images from "./images";
 import "./App.css";
 import WordDefinition from "./worddefinition";
@@ -36,7 +35,7 @@ export default function SearchEngine() {
     <div className="row">
       <form onSubmit={search}>
         <div className="row">
-          <div className="col-10">
+          <div className="col">
             <input
               align="center"
               type="search"
@@ -45,9 +44,6 @@ export default function SearchEngine() {
               autoFocus={true}
               onChange={updateValue}
             />
-          </div>
-          <div className="col-2 align-items-center">
-            <Button variant="outline-info">Search</Button>{" "}
           </div>
         </div>
       </form>
