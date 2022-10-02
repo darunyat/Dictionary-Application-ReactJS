@@ -1,6 +1,8 @@
 Dictionary application created using React JS.
 
 Tools used:
+
+
 Dictionary API:
 https://dictionaryapi.dev/
 
